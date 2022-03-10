@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Decrypt and source secrets
+sops -d ./quay-auth.enc.json > ./quay-auth.json
+sops -d ./enc.env > ./.env
+source .env
+
 kam bootstrap \
   --service-repo-url 'https://gitlab.taco.moe/gitops/taxi.git' \
   --gitops-repo-url 'https://gitlab.taco.moe/gitops/gitops.git' \
