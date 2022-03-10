@@ -1,3 +1,6 @@
 # Ignore decrypted files
 .env
 quay-auth.json
+
+# Ignore temporary files
+tmp
