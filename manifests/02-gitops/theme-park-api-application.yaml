@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: theme-park-api
+  namespace: openshift-gitops
+spec:
+  destination:
+    name: in-cluster
+    namespace: theme-park-api
+  source:
+    repoURL: 'https://git.taco.moe/openshift/openshift-url-rewriting-example.git'
+    path: '.'
+  project: theme-park-api
