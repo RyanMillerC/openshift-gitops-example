@@ -1,10 +1,10 @@
 # GitOps
 
-Configuration-as-Code to deploy a CI/CD environment on OpenShift.
+Configuration-as-Code to continuously deploy (CD) an application to OpenShift.
 
 ## Step 1
 
-Deploy Openshift GitOps and OpenShift Pipelines operators to the cluster:
+Deploy the Openshift GitOps operator to the cluster:
 
 ```bash
 $ oc create -f ./manifests/01-operators
